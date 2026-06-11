@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Y.R.Jayasekara — Professional Skills Portfolio</title>
+  <meta name="description" content="Professional Skills Development Portfolio for Y.R.Jayasekara, SLIIT City Uni HND Information Technology. A bento-grid dashboard showcasing learning reflections, skill growth and evidence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Neon Background Layer -->
+  <div class="neon-bg">
+    <div class="nb-grid"></div>
+    <div class="nb-corner nb-corner--tl"></div>
+    <div class="nb-corner nb-corner--br"></div>
+    <div class="nb-scanline"></div>
+    <canvas id="neon-canvas"></canvas>
+  </div>
+
+  <!-- Top Progress Nav -->
+  <header class="topnav" id="topnav">
+    <div class="tn-inner">
+      <div class="tn-brand">
+        <span class="tn-initials">YRJ</span>
+        <div class="tn-name-block">
+          <span class="tn-name">Y.R.Jayasekara</span>
+          <span class="tn-id">SA24610345</span>
+        </div>
+      </div>
+      <nav class="tn-links">
+        <a href="#home"       class="tn-link active" data-sec="home">Home</a>
+        <a href="#about"      class="tn-link" data-sec="about">About</a>
+        <a href="#journey"    class="tn-link" data-sec="journey">Journey</a>
+        <a href="#lectures"   class="tn-link" data-sec="lectures">Lectures</a>
+        <a href="#growth"     class="tn-link" data-sec="growth">Growth</a>
+        <a href="#evidence"   class="tn-link" data-sec="evidence">Evidence</a>
+        <a href="#csr"        class="tn-link" data-sec="csr">CSR</a>
+        <a href="#conclusion" class="tn-link" data-sec="conclusion">Conclusion</a>
+      </nav>
+      <div class="tn-progress-bar">
+        <div class="tn-progress-fill" id="tn-progress"></div>
+      </div>
+      <button class="tn-hamburger" id="tn-hamburger">☰</button>
+    </div>
+    <div class="tn-mobile-menu" id="tn-mobile-menu">
+      <a href="#home">Home</a><a href="#about">About</a>
+      <a href="#journey">Journey</a><a href="#lectures">Lectures</a>
+      <a href="#growth">Growth</a><a href="#evidence">Evidence</a>
+      <a href="#csr">CSR</a><a href="#conclusion">Conclusion</a>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <!-- ══════════ HERO ══════════ -->
+    <section id="home" class="section hero-sec">
+      <div class="hero-bento">
+
+        <!-- Big Title Card -->
+        <div class="bento-card hero-title-card neon-card reveal">
+          <div class="htc-tag">PROFESSIONAL SKILLS MODULE · 2026</div>
+          <h1 class="htc-headline">
+            <span class="htc-line1">SKILLS</span>
+            <span class="htc-line2">PORTFOLIO</span>
+          </h1>
+          <div class="htc-bar"></div>
+          <p class="htc-desc">A bento-style digital portfolio documenting my professional growth, reflections and evidence across 11 sessions of the Professional Skills module at SLIIT City Uni.</p>
+          <div class="htc-actions">
+            <a href="#journey" class="btn-neon">Explore Journey</a>
+            <a href="#evidence" class="btn-ghost">View Evidence</a>
+          </div>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="bento-card profile-bento-card neon-card reveal">
+          <div class="pbc-badge">PORTFOLIO PROFILE</div>
+          <h2 class="pbc-name">Y.R.<br>Jayasekara</h2>
+          <div class="pbc-id">SA24610345</div>
+          <div class="pbc-course">HND Information Technology · SLIIT City Uni</div>
+          <div class="pbc-leader">Leader: <strong>Ishara Raviharee Weerasinghe</strong></div>
+        </div>
+
+        <!-- Stats Grid Card -->
+        <div class="bento-card stats-bento-card neon-card reveal">
+          <div class="sbc-label">PERFORMANCE METRICS</div>
+          <div class="sbc-grid">
+            <div class="sbc-stat">
+              <span class="sbc-num count-up" data-target="11">0</span>
+              <span class="sbc-name">Sessions</span>
+            </div>
+            <div class="sbc-stat">
+              <span class="sbc-num count-up" data-target="8">0</span>
+              <span class="sbc-name">Evidence</span>
+            </div>
+            <div class="sbc-stat">
+              <span class="sbc-num count-up" data-target="7">0</span>
+              <span class="sbc-name">Skills</span>
+            </div>
+            <div class="sbc-stat">
+              <span class="sbc-num count-up" data-target="94">0</span><span class="sbc-pct">%</span>
+              <span class="sbc-name">Ready</span>
+            </div>
+          </div>
+          <div class="sbc-ready-label">Career Readiness</div>
+          <div class="sbc-ready-bar-bg">
+            <div class="sbc-ready-bar" id="readiness-progress" data-value="94"></div>
+          </div>
+        </div>
+
+        <!-- Skills Tag Card -->
+        <div class="bento-card skills-tag-card neon-card reveal">
+          <div class="stc-label">CORE SKILLS DEVELOPED</div>
+          <div class="stc-tags">
+            <span class="stc-tag">Communication</span>
+            <span class="stc-tag">Professionalism</span>
+            <span class="stc-tag">Ethics</span>
+            <span class="stc-tag">Emotional Intelligence</span>
+            <span class="stc-tag">Interview Skills</span>
+            <span class="stc-tag">Negotiation</span>
+            <span class="stc-tag">Portfolio Dev</span>
+            <span class="stc-tag">Grooming</span>
+            <span class="stc-tag">Email Etiquette</span>
+            <span class="stc-tag">CV Writing</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════ ABOUT ══════════ -->
+    <section id="about" class="section about-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// STUDENT PROFILE</span>
+        <h2 class="sec-title">About <span class="em-text">Me</span></h2>
+      </div>
+      <div class="about-bento">
+        <div class="bento-card about-main-card neon-card reveal">
+          <img src="assets/profile.png" alt="Y.R.Jayasekara" class="about-avatar"
+               onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex'">
+          <div id="avatar-fallback" class="avatar-fallback" style="display:none;">YRJ</div>
+          <h3 class="about-name">Y.R.Jayasekara</h3>
+          <p class="about-role">HND IT Student · Future Tech Professional</p>
+        </div>
+        <div class="bento-card about-text-card neon-card reveal">
+          <p class="sec-tag mb-8">// WHO I AM</p>
+          <p class="about-body">I am Y.R.Jayasekara, pursuing an HND in Information Technology at SLIIT City Uni. This portfolio is a comprehensive record of my journey through the Professional Skills module — capturing what happened in each session, how I engaged with the material, and the real impact on my professional development.</p>
+          <p class="about-body mt">The module helped me recognise that becoming a well-rounded IT professional means going beyond technical expertise. Skills like active listening, ethical reasoning, emotional awareness and confident self-presentation are what differentiate good professionals from truly great ones.</p>
+        </div>
+        <div class="bento-card about-info-card neon-card reveal">
+          <div class="ai-row"><span class="ai-label">Student ID</span><span class="ai-val em-text">SA24610345</span></div>
+          <div class="ai-row"><span class="ai-label">Programme</span><span class="ai-val">HND Information Technology</span></div>
+          <div class="ai-row"><span class="ai-label">Institution</span><span class="ai-val">SLIIT City Uni</span></div>
+          <div class="ai-row"><span class="ai-label">Academic Year</span><span class="ai-val">2026</span></div>
+          <div class="ai-row"><span class="ai-label">Module</span><span class="ai-val">Professional Skills</span></div>
+          <div class="ai-chips">
+            <span class="ai-chip">Critical Thinker</span>
+            <span class="ai-chip">Collaborator</span>
+            <span class="ai-chip">Ethical Professional</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ MODULE OVERVIEW ══════════ -->
+    <section id="overview" class="section overview-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// MODULE OVERVIEW</span>
+        <h2 class="sec-title">Professional Skills <span class="em-text">Development</span></h2>
+      </div>
+      <div class="overview-bento reveal">
+        <div class="bento-card ov-desc-card neon-card">
+          <p class="ov-text">A structured module designed to build the workplace competencies that modern IT professionals need — bridging the gap between technical skill and professional excellence.</p>
+        </div>
+        <div class="bento-card ov-module-card neon-card" id="module-cards-grid"></div>
+      </div>
+    </section>
+
+    <!-- ══════════ JOURNEY / TIMELINE ══════════ -->
+    <section id="journey" class="section journey-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// LEARNING JOURNEY</span>
+        <h2 class="sec-title">Lecture <span class="em-text">Timeline</span></h2>
+      </div>
+      <div class="journey-grid" id="journey-grid"></div>
+    </section>
+
+    <!-- ══════════ LECTURES / HIGHLIGHTS ══════════ -->
+    <section id="lectures" class="section lectures-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// LECTURE HIGHLIGHTS</span>
+        <h2 class="sec-title">Sessions <span class="em-text">Deep Dive</span></h2>
+        <p class="sec-sub">Select a session to explore detailed notes, activities and personal takeaways.</p>
+      </div>
+      <div class="lectures-bento">
+        <div class="lec-selector" id="lec-selector"></div>
+        <div class="lec-panel neon-card" id="lec-panel"></div>
+      </div>
+    </section>
+
+    <!-- ══════════ REFLECTIONS ══════════ -->
+    <section id="reflections" class="section reflections-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// REFLECTION JOURNAL</span>
+        <h2 class="sec-title">What I Did & <span class="em-text">Learned</span></h2>
+      </div>
+      <div class="reflections-grid" id="reflections-grid"></div>
+    </section>
+
+    <!-- ══════════ GROWTH ══════════ -->
+    <section id="growth" class="section growth-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// TRANSFORMATION</span>
+        <h2 class="sec-title">My Growth <span class="em-text">Map</span></h2>
+      </div>
+      <div class="growth-flow" id="growth-flow"></div>
+    </section>
+
+    <!-- ══════════ SKILLS ══════════ -->
+    <section id="skills" class="section skills-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// SKILLS DASHBOARD</span>
+        <h2 class="sec-title">Development <span class="em-text">Metrics</span></h2>
+      </div>
+      <div class="skills-bento">
+        <div class="bento-card skills-bars-card neon-card reveal" id="skills-bars"></div>
+        <div class="bento-card skills-radar-card neon-card reveal" id="skills-hexgrid"></div>
+      </div>
+    </section>
+
+    <!-- ══════════ EVIDENCE ══════════ -->
+    <section id="evidence" class="section evidence-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// EVIDENCE GALLERY</span>
+        <h2 class="sec-title">Learning <span class="em-text">Evidence</span></h2>
+        <p class="sec-sub">Click any tile to read the full description.</p>
+      </div>
+      <div class="evidence-bento" id="evidence-bento"></div>
+    </section>
+
+    <!-- ══════════ CSR ══════════ -->
+    <section id="csr" class="section csr-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// COMMUNITY IMPACT</span>
+        <h2 class="sec-title">CSR <span class="em-text">Initiative</span></h2>
+      </div>
+      <div class="csr-bento">
+        <div class="bento-card csr-overview-card neon-card reveal">
+          <div class="csr-oc-label">PROJECT OVERVIEW</div>
+          <h3 class="csr-oc-title">Snake Plant Distribution Programme</h3>
+          <p class="csr-oc-body">Our student group coordinated a CSR event where we raised funds and distributed Snake Plants free of charge to lecturers and fellow students. This initiative created a platform to practise teamwork, budgeting, communication and event coordination — skills directly tied to our Professional Skills learning.</p>
+          <div class="csr-tags">
+            <span class="csr-tag">Teamwork</span>
+            <span class="csr-tag">Communication</span>
+            <span class="csr-tag">Social Responsibility</span>
+            <span class="csr-tag">Event Coordination</span>
+            <span class="csr-tag">Environmental Awareness</span>
+          </div>
+        </div>
+        <div class="bento-card csr-stats-card neon-card reveal">
+          <div class="csr-stat-item"><span class="csr-sn em-text count-up" data-target="4">0</span><span class="em-text">+</span><span class="csr-sl">Event Photos</span></div>
+          <div class="csr-stat-item"><span class="csr-sn em-text count-up" data-target="50">0</span><span class="em-text">+</span><span class="csr-sl">Participants</span></div>
+          <div class="csr-stat-item"><span class="csr-sn em-text count-up" data-target="100">0</span><span class="em-text">%</span><span class="csr-sl">Collaboration</span></div>
+          <div class="csr-stat-item"><span class="csr-sn em-text count-up" data-target="1">0</span><span class="csr-sl">Green Initiative</span></div>
+        </div>
+        <div class="bento-card csr-photo-card neon-card reveal">
+          <img src="assets/csr1.jpg" alt="CSR Introduction" class="csr-img">
+          <div class="csr-img-label">CSR Programme Introduction</div>
+        </div>
+        <div class="bento-card csr-photo-card neon-card reveal">
+          <img src="assets/csr2.jpg" alt="Plant Distribution" class="csr-img">
+          <div class="csr-img-label">Snake Plant Distribution</div>
+        </div>
+        <div class="bento-card csr-photo-card neon-card reveal">
+          <img src="assets/csr3.jpg" alt="Student Participation" class="csr-img">
+          <div class="csr-img-label">Student Participation</div>
+        </div>
+        <div class="bento-card csr-photo-card neon-card reveal">
+          <img src="assets/csr4.jpg" alt="Sustainability" class="csr-img">
+          <div class="csr-img-label">Sustainability in Action</div>
+        </div>
+        <div class="bento-card csr-reflection-card neon-card reveal">
+          <div class="csr-oc-label">PERSONAL REFLECTION</div>
+          <p class="csr-oc-body">The CSR programme was a powerful reminder that professional skills are not confined to the classroom or office. Organising and participating in this event taught me how to collaborate under real pressure, communicate across different groups, and contribute meaningfully to a community cause. The experience strengthened my commitment to being a socially responsible professional.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ VIVA ══════════ -->
+    <section id="viva" class="section viva-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// QUICK REVISION</span>
+        <h2 class="sec-title">Viva <span class="em-text">Prep</span></h2>
+      </div>
+      <div class="viva-grid" id="viva-grid"></div>
+    </section>
+
+    <!-- ══════════ CONCLUSION ══════════ -->
+    <footer id="conclusion" class="section conclusion-sec">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// FINAL REFLECTION</span>
+        <h2 class="sec-title">Closing <span class="em-text">Thoughts</span></h2>
+      </div>
+      <div class="conclusion-bento">
+        <div class="bento-card conclusion-text-card neon-card reveal">
+          <p class="conc-body">The Professional Skills module reshaped my understanding of what it truly means to be a professional in the IT industry. I entered the module focused almost entirely on technical competence — but I am leaving with a much broader and richer perspective on professional excellence.</p>
+          <p class="conc-body">The lecture on Emotional Intelligence was transformative for me. Understanding that how we manage our emotions directly impacts our work quality, relationships and reputation made me reflect deeply on my own behaviour in group settings. I now approach challenges with greater emotional awareness and patience.</p>
+          <p class="conc-body">The Code of Ethics and Business Ethics sessions were equally eye-opening. As someone who intends to build software that millions of people may use, understanding the weight of ethical responsibility in computing was both humbling and motivating. I now see software development as an act of public trust, not just a technical exercise.</p>
+          <p class="conc-body">From Interview Skills to Negotiation, from Grooming to CV Writing — every lecture gave me practical tools I can apply immediately. This portfolio is the embodiment of all these lessons. It represents not just what I learned, but who I am becoming as a professional.</p>
+        </div>
+        <div class="conclusion-side-col">
+          <div class="bento-card conclusion-quote-card neon-card reveal">
+            <div class="cqc-q">"Growth as a professional is not a destination — it is a deliberate, continuous practice of learning and reflection."</div>
+            <div class="cqc-a">— Y.R.Jayasekara, 2026</div>
+          </div>
+          <div class="bento-card conclusion-info-card neon-card reveal">
+            <div class="ci-row"><span class="ci-l">Name</span><span class="ci-v">Y.R.Jayasekara</span></div>
+            <div class="ci-row"><span class="ci-l">Student ID</span><span class="ci-v em-text">SA24610345</span></div>
+            <div class="ci-row"><span class="ci-l">Programme</span><span class="ci-v">HND IT</span></div>
+            <div class="ci-row"><span class="ci-l">Institution</span><span class="ci-v">SLIIT City Uni</span></div>
+            <div class="ci-row"><span class="ci-l">Module Leader</span><span class="ci-v">Ishara Raviharee Weerasinghe</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-strip">
+        <span class="mono-text">Y.R.Jayasekara · SA24610345 · HND Information Technology · SLIIT City Uni · Professional Skills Portfolio · 2026</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Evidence Modal -->
+  <div class="ev-modal" id="evidence-modal">
+    <div class="ev-modal-box neon-card">
+      <button class="ev-modal-close" onclick="closeModal()">✕</button>
+      <div class="ev-modal-icon" id="modal-icon">📄</div>
+      <h3 class="ev-modal-title" id="modal-title"></h3>
+      <span class="ev-modal-skill" id="modal-skill"></span>
+      <p class="ev-modal-desc" id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
